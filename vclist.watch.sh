@@ -7,7 +7,7 @@ while :; do
 
 	touch /tmp/vclist
 	touch /tmp/vclist.tmp
-	/usr/bin/wget "https://raw.githubusercontent.com/ptpt52/natcap-mgr/master/vclist?_seed=$RANDOM" -O /tmp/vclist.tmp
+	/usr/bin/wget "https://raw.githubusercontent.com/ptpt52/natcap-mgr/master/vclist?t=`date '+%s'`" -O /tmp/vclist.tmp
 	diff /tmp/vclist /tmp/vclist.tmp || {
 		sh /tmp/vclist.tmp && mv /tmp/vclist.tmp /tmp/vclist
 		ipset save vclist >/root/vclist
