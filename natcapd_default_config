@@ -1,0 +1,23 @@
+#!/bin/sh
+
+uci -q batch <<-EOT
+	set natcapd.default._built_in_server='119.29.195.202'
+	set natcapd.default.enable_encryption='1'
+	set natcapd.default.client_forward_mode='1'
+	set natcapd.default.server_persist_timeout='6'
+	set natcapd.default.debug='3'
+	set natcapd.default.dns_proxy_server='45.32.63.59:5353'
+	set natcapd.default.clear_dst_on_reload='0'
+	delete natcapd.default.server
+	add_list natcapd.default.server='139.59.15.70:65535'
+	add_list natcapd.default.server='45.32.63.59:65535'
+	add_list natcapd.default.server='159.203.236.52:65535'
+	set natcapd.default.dns_proxy_force='1'
+	set natcapd.default.dns_proxy_force_tcp='1'
+	commit natcapd
+EOT
+
+/etc/init.d/natcapd enable
+/etc/init.d/natcapd restart
+
+exit 0
