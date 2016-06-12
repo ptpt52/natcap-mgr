@@ -11,7 +11,7 @@ uci -q batch <<-EOT
 	delete natcapd.default.server
 	add_list natcapd.default.server='139.59.15.70:65535'
 	add_list natcapd.default.server='45.32.63.59:65535'
-	add_list natcapd.default.server='159.203.236.52:65535'
+	add_list natcapd.default.server='192.241.223.185:65535'
 	set natcapd.default.dns_proxy_force='1'
 	set natcapd.default.dns_proxy_force_tcp='1'
 	commit natcapd
