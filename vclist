@@ -3,86 +3,86 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 ipset destroy vclist
 ipset create vclist hash:mac
-cat $0 | grep ^[a-fA-F0-9][a-fA-F0-9]: | sort | uniq | while read line; do
+cat $0 | grep ^[a-fA-F0-9][a-fA-F0-9][-] | sed 's/-/:/g' | sort | uniq | while read line; do
 	ipset add vclist $line
 done
 
 exit 0
 
 # ptpt52@gmail.com
-04:A1:51:8C:AB:A3
+04-A1-51-8C-AB-A3
 # ap-ubuntu
-08:62:66:34:76:94
+08-62-66-34-76-94
 # sc-game
-AC:22:0B:83:36:66
+AC-22-0B-83-36-66
 # mac os vbox vm ubuntu-server
-08:00:27:6B:35:46
+08-00-27-6B-35-46
 
 # 叶金寿 <aquariusye@163.com>
-F0:B4:29:D4:34:C6
+F0-B4-29-D4-34-C6
 
 # miroku327@163.com
-44:94:FC:84:4F:96
+44-94-FC-84-4F-96
 
 # 80190461@qq.com
-A4:2B:8C:09:33:61
+A4-2B-8C-09-33-61
 
 # 2238236@qq.com
-6C:B0:CE:ED:29:9D
+6C-B0-CE-ED-29-9D
 
 # llyd-mt7621-1 1810
-78:D3:8D:C4:92:E0
+78-D3-8D-C4-92-E0
 #203B x86
-00:99:2A:FF:47:17
+00-99-2A-FF-47-17
 
 #20161230 sq
-18:40:A4:AB:2A:44
+18-40-A4-AB-2A-44
 
 # amy@szwinex.com
-6C:B0:CE:FB:94:DB
+6C-B0-CE-FB-94-DB
 
 # 27016601@126.com
-F0:B4:29:55:FD:18
+F0-B4-29-55-FD-17
 
 # 10181201@qq.com
-80:37:73:FE:15:BF
+80-37-73-FE-15-BF
 
 # 608090@qq.com
-F0:B4:29:D7:9B:35
+F0-B4-29-D7-9B-34
 
 # ouyang.sandra@yahoo.com
-28:6C:07:50:77:74
+28-6C-07-50-77-73
 
 #2017-01-01
 # k2 yxh
-CC:81:DA:62:D1:08
+CC-81-DA-62-D1-08
 
 #x86 ylq ritchie_yu@hotmail.com
-00:E3:CB:25:46:35
+00-E3-CB-25-46-35
 
 # 584917242@qq.com
-64:09:80:08:70:8E
+64-09-80-08-70-8D
 
 # AC xiaheng
-B8:97:21:5A:2D:5E
+B8-97-21-5A-2D-5E
 
 #2017-2-7
 # luwan@139.com
-F0:B4:29:D3:B1:90
+F0-B4-29-D3-B1-8F
 
 #2017-2-12
 #41141191@qq.com
-F0:B4:29:D2:18:D0
+F0-B4-29-D2-18-CF
 
 #2017-2-20 wg
 # 韦干 <gwei10@qq.com>
-A0:63:91:9F:AC:F3
+A0-63-91-9F-AC-F3
 
 #wsp 254723014@qq.com
-F0:B4:29:D3:C6:87
+F0-B4-29-D3-C6-86
 
 #xsj 975259642@qq.com
-F0:B4:29:D2:01:68
+F0-B4-29-D2-01-68
 
 #185187856@qq.com
-6C:B0:CE:28:F8:E4
+6C-B0-CE-28-F8-E4
